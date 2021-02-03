@@ -1,0 +1,85 @@
+@import "../../styles/variables";
+
+.title__header {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 35%;
+  text-align: center;
+  //   padding: 0;
+  //   top: 50%;
+  //   left: 50%;
+
+  &-start {
+    display: flex;
+    padding: 0;
+
+    justify-content: center;
+    color: $secondary-font-color;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  &-primary {
+    margin: 0;
+
+    color: $primary-font-color;
+    font-family: $header-font-family;
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+
+    text-transform: uppercase;
+  }
+
+  &-list {
+    color: $secondary-font-color;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-transform: uppercase;
+  }
+}
+
+.title__list-component {
+  list-style: none;
+  font-weight: 700;
+  padding: 0 3rem;
+  letter-spacing: 0.1rem;
+
+  &:hover {
+    cursor: pointer;
+    color: #fff;
+  }
+}
+
+// .line-1 {
+//   //   position: relative;
+//   //   top: 50%;
+//   //   width: 24em;
+//   margin: 0 auto;
+//   border-right: 2px solid rgba(255, 255, 255, 0.75);
+
+//   text-align: center;
+//   white-space: nowrap;
+//   overflow: hidden;
+// }
+
+// /* Animation */
+// .anim-typewriter {
+//   animation: typewriter 3s steps(44) 1s 1 normal both,
+//     blinkTextCursor 500ms steps(44) infinite normal;
+// }
+// @keyframes typewriter {
+//   from {
+//     width: 0;
+//   }
+//   to {
+//     width: 39.5em;
+//   }
+// }

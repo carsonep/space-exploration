@@ -1,0 +1,27 @@
+@import "../../styles/variables";
+
+.side__nav {
+  display: flex;
+  position: absolute;
+
+  align-items: flex-end;
+  top: 35%;
+  right: 0px;
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    flex: 1;
+    padding-right: 1rem;
+
+    &-item {
+      color: $secondary-font-color;
+      padding-top: 1rem;
+
+      &:first-child {
+        color: $primary-font-color;
+      }
+    }
+  }
+}
