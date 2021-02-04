@@ -86,6 +86,7 @@ function About() {
               className="footer-button"
               href="https://api.nasa.gov/"
               target="_blank"
+              rel="noreferrer"
             >
               NASA API
             </a>

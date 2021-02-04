@@ -58,28 +58,21 @@
   }
 }
 
-// .line-1 {
-//   //   position: relative;
-//   //   top: 50%;
-//   //   width: 24em;
-//   margin: 0 auto;
-//   border-right: 2px solid rgba(255, 255, 255, 0.75);
+@media only screen and (max-width: 820px) {
+  .title__header {
+    &-primary {
+      font-size: 2.5rem;
+    }
+  }
+}
 
-//   text-align: center;
-//   white-space: nowrap;
-//   overflow: hidden;
-// }
-
-// /* Animation */
-// .anim-typewriter {
-//   animation: typewriter 3s steps(44) 1s 1 normal both,
-//     blinkTextCursor 500ms steps(44) infinite normal;
-// }
-// @keyframes typewriter {
-//   from {
-//     width: 0;
-//   }
-//   to {
-//     width: 39.5em;
-//   }
-// }
+@media only screen and (max-width: 690px) {
+  .title__header {
+    &-start {
+      font-size: 1.1rem;
+    }
+    &-primary {
+      font-size: 2.2rem;
+    }
+  }
+}
