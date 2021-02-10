@@ -1,20 +1,24 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Header from "../Header/Header";
 import "./Home.scss";
 import About from "../About/About";
 import Planets from "../Planets/Planets";
 import News from "../News/News";
 import Footer from "../Footer/Footer";
-import { gsap } from "gsap";
+
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
   return (
-    <div className="home__container" ref={(el) => (pagesAni = el)}>
-      <Header className="description panel blue" />
-      <About className="panel red" />
-      <Planets className="panel orange" />
-      <News className="panel purple" />
-      <Footer className="panel green" />
+    <div>
+      <Header />
+      <About />
+      <Planets />
+      <News />
+      <Footer />
     </div>
   );
 }
