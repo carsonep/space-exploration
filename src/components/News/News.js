@@ -26,7 +26,7 @@ function News() {
           alt="star background"
         />
         <div className="news__container-daily">
-          <div class="paper">
+          <div className="paper">
             <h2 className="news__container-daily-date">{news.date}</h2>
             <h1 className="news__container-daily-title">{news.title}</h1>
             <p className="news__container-daily-story">{news.explanation}</p>

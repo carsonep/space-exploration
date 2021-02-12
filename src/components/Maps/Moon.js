@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "../SpaceView/SpaceView.scss";
+import Config from "@arcgis/core/config";
 import Map from "@arcgis/core/Map";
 import SceneView from "@arcgis/core/views/SceneView";
 import ElevationLayer from "@arcgis/core/layers/ElevationLayer";
@@ -7,11 +8,14 @@ import TileLayer from "@arcgis/core/layers/TileLayer";
 import FeatureLayer from "@arcgis/core/layers/FeatureLayer";
 import LayerList from "@arcgis/core/widgets/LayerList";
 
+Config.apiKey =
+  "AAPKd531b53f980f4a87880dc870c8c1c7d3aLPvIb210--jpJYpsM1SrSSRUEbo-XNGtLQXMaRO_IPPMyZAQt0UMBk8SvvY94QI";
+
 function MoonView() {
   useEffect(() => {
     const marsElevation = new ElevationLayer({
       url:
-        "https://tiles.arcgis.com/tiles/WQ9KVmV6xGGMnCiQ/arcgis/rest/services/Moon_Elevation_Surface/ImageServer?f=json",
+        "https://tiles.arcgis.com/tiles/WQ9KVmV6xGGMnCiQ/arcgis/rest/services/Moon_Elevation_Surface/ImageServer",
       copyright:
         "NASA, ESA, HRSC, Goddard Space Flight Center, USGS Astrogeology Science Center, Esri",
     });
@@ -43,8 +47,6 @@ function MoonView() {
           type: "color",
           color: [0, 0, 0, 0],
         },
-        starsEnabled: false,
-        atmosphereEnabled: false,
       },
       camera: {
         position: {
@@ -60,62 +62,62 @@ function MoonView() {
 
     const cratersLayer = new FeatureLayer({
       url:
-        "https://pdsimage2.wr.usgs.gov/Individual_Investigations/moon_lro.kaguya_multi_craterdatabase_robbins_2018/data/lunar_crater_database_robbins_2018.xml",
-      definitionExpression: "type = 'Crater, craters'",
-      title: "Craters",
-      renderer: {
-        type: "simple",
-        symbol: {
-          type: "polygon-3d",
-          symbolLayers: [
-            {
-              type: "fill",
-              material: { color: [255, 255, 255, 0.1] },
-              outline: {
-                color: [0, 0, 0, 0.4],
-                size: 2,
-              },
-            },
-          ],
-        },
-      },
-      labelingInfo: [
-        {
-          labelPlacement: "above-center",
-          labelExpressionInfo: { expression: "$feature.NAME" },
-          symbol: {
-            type: "label-3d",
-            symbolLayers: [
-              {
-                type: "text",
-                material: {
-                  color: [0, 0, 0, 0.9],
-                },
-                halo: {
-                  size: 2,
-                  color: [255, 255, 255, 0.7],
-                },
-                font: {
-                  size: 10,
-                },
-              },
-            ],
-            verticalOffset: {
-              screenLength: 40,
-              maxWorldLength: 500000,
-              minWorldLength: 0,
-            },
-            callout: {
-              type: "line",
-              size: 0.5,
-              color: [255, 255, 255, 0.9],
-              border: {
-                color: [0, 0, 0, 0.3],
-              },
-            },
-          },
-        },
-      ],
+        "https://trek.nasa.gov/tiles/Moon/EQ/Apollo16_MetricCam_ClrConf_Global_1024ppd",
+      //   definitionExpression: "type = 'Crater, craters'",
+      //   title: "Craters",
+      //   renderer: {
+      //     type: "simple",
+      //     symbol: {
+      //       type: "polygon-3d",
+      //       symbolLayers: [
+      //         {
+      //           type: "fill",
+      //           material: { color: [255, 255, 255, 0.1] },
+      //           outline: {
+      //             color: [0, 0, 0, 0.4],
+      //             size: 2,
+      //           },
+      //         },
+      //       ],
+      //     },
+      //   },
+      //   labelingInfo: [
+      //     {
+      //       labelPlacement: "above-center",
+      //       labelExpressionInfo: { expression: "$feature.NAME" },
+      //       symbol: {
+      //         type: "label-3d",
+      //         symbolLayers: [
+      //           {
+      //             type: "text",
+      //             material: {
+      //               color: [0, 0, 0, 0.9],
+      //             },
+      //             halo: {
+      //               size: 2,
+      //               color: [255, 255, 255, 0.7],
+      //             },
+      //             font: {
+      //               size: 10,
+      //             },
+      //           },
+      //         ],
+      //         verticalOffset: {
+      //           screenLength: 40,
+      //           maxWorldLength: 500000,
+      //           minWorldLength: 0,
+      //         },
+      //         callout: {
+      //           type: "line",
+      //           size: 0.5,
+      //           color: [255, 255, 255, 0.9],
+      //           border: {
+      //             color: [0, 0, 0, 0.3],
+      //           },
+      //         },
+      //       },
+      //     },
+      //   ],
     });
 
     map.add(cratersLayer);
@@ -123,7 +125,7 @@ function MoonView() {
     var layerList = new LayerList({
       view: view,
     });
-    // Adds widget below other elements in the top left corner of the view
+
     view.ui.add(layerList, {
       position: "top-left",
     });

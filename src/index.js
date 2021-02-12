@@ -1,16 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import config from "@arcgis/core/config.js";
+import config from "@arcgis/core/config";
 
 // Assets have been moved from the default location
 
-import "@arcgis/core/assets/esri/themes/light/main.css";
+import "@arcgis/core/assets/esri/themes/dark/main.css";
 import "./index.css";
 
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-config.assetsPath = "/public/assets";
+config.assetsPath = "/assets";
 
 ReactDOM.render(
   <React.StrictMode>
