@@ -4,6 +4,7 @@ import Home from "./components/Home/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import MarsView from "./components/Maps/Mars";
 import MoonView from "./components/Maps/Moon";
+import MercuryView from "./components/Maps/Mercury";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/explore/mars" exact component={MarsView} />
           <Route path="/explore/moon" exact component={MoonView} />
+          <Route path="/explore/vesta" exact component={MercuryView} />
         </Switch>
       </div>
     </Router>

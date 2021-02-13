@@ -1,5 +1,6 @@
 import React from "react";
 import "./TitleHeader.scss";
+import { NavLink } from "react-router-dom";
 
 function TitleHeader() {
   return (
@@ -10,8 +11,12 @@ function TitleHeader() {
           Space Exploration
         </h1>
         <ul className="title__header-list">
-          <li className="title__list-component">Moon</li>
-          <li className="title__list-component">Mars</li>
+          <NavLink to="/explore/moon">
+            <li className="title__list-component">Moon</li>
+          </NavLink>
+          <NavLink to="/explore/mars">
+            <li className="title__list-component">Mars</li>
+          </NavLink>
           <li className="title__list-component">Vesta</li>
         </ul>
       </div>

@@ -125,13 +125,19 @@ function MarsView() {
 
     map.add(cratersLayer);
 
+    const shadedRelief = new TileLayer({
+      url:
+        "https://astro.arcgis.com/arcgis/rest/services/OnMars/MColorDEM/MapServer?f=json",
+      title: "Shaded Relief",
+      visible: false,
+    });
+    map.add(shadedRelief);
+
     var layerList = new LayerList({
       view: view,
     });
     // Adds widget below other elements in the top left corner of the view
-    view.ui.add(layerList, {
-      position: "bottom-left",
-    });
+    view.ui.add(layerList, "bottom-left");
   }, []);
 
   return (
