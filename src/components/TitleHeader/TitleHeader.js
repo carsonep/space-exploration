@@ -24,7 +24,7 @@ function TitleHeader() {
             <li className="title__list-component">Mars</li>
           </NavLink>
           <NavLink to="/explore/mercury" style={{ textDecoration: "none" }}>
-            <li className="title__list-component">Vesta</li>
+            <li className="title__list-component">Mercury</li>
           </NavLink>
         </ul>
       </div>

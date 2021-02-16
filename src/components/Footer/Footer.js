@@ -13,7 +13,15 @@ function Footer() {
         </div>
         <div className="footer__section-social">
           <ul className="footer__section-social-list">
-            <li className="footer__section-social-item">GitHub</li>
+            <li className="footer__section-social-item">
+              <a
+                href="https://github.com/carsonep"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </a>
+            </li>
             <li className="footer__section-social-item">Portfolio</li>
             <li className="footer__section-social-item">LinkedIn</li>
           </ul>

@@ -25,7 +25,7 @@ function MarsView() {
 
     const marsImagery = new TileLayer({
       url:
-        "https://astro.arcgis.com/arcgis/rest/services/OnMars/MDIM/MapServer?f=json",
+        "https://astro.arcgis.com/arcgis/rest/services/OnMars/MDIM/MapServer",
       title: "Imagery",
       copyright: "USGS Astrogeology Science Center, NASA, JPL, Esri",
     });
@@ -40,7 +40,7 @@ function MarsView() {
     const view = new SceneView({
       map: map,
       container: "viewDiv",
-      qualityProfile: "high",
+      qualityProfile: "medium",
       // setting the spatial reference for Mars_2000 coordinate system
       spatialReference: {
         wkid: 104971,

@@ -18,19 +18,17 @@ function News() {
     fetchData();
   }, []);
   return (
-    <div>
-      <div className="news__container">
-        <img
-          className="news__container-image"
-          src={SpaceBackground}
-          alt="star background"
-        />
-        <div className="news__container-daily">
-          <div className="paper">
-            <h2 className="news__container-daily-date">{news.date}</h2>
-            <h1 className="news__container-daily-title">{news.title}</h1>
-            <p className="news__container-daily-story">{news.explanation}</p>
-          </div>
+    <div className="news__container">
+      <img
+        className="news__container-image"
+        src={SpaceBackground}
+        alt="star background"
+      />
+      <div className="news__container-daily">
+        <div className="paper">
+          <h2 className="news__container-daily-date">{news.date}</h2>
+          <h1 className="news__container-daily-title">{news.title}</h1>
+          <p className="news__container-daily-story">{news.explanation}</p>
         </div>
       </div>
     </div>

@@ -1,11 +1,19 @@
 .news__container {
-  display: flex;
-
+  // display: flex;
   position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-size: 100% 100%;
+  height: 100vh;
+  width: 100%;
   z-index: 0;
 
   &-image {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+
     z-index: -2;
   }
 
@@ -14,7 +22,7 @@
     justify-content: center;
     padding-top: 5rem;
 
-    position: absolute;
+    // position: absolute;
 
     &-title {
       padding: 0 3rem;
@@ -38,8 +46,9 @@
 /* Messy stack of paper */
 .paper {
   background: #fcfbfe;
-  padding: 30px;
+  padding: 0 30px;
   width: 50%;
+
   position: relative;
 }
 
@@ -76,6 +85,82 @@
 
 @media only screen and (max-width: 1800px) {
   .news__container {
-    height: auto;
+    height: 100%;
+
+    &-image {
+      height: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .news__container {
+    height: 100%;
+
+    &-daily-title {
+      font-size: 2rem;
+    }
+
+    &-daily-story {
+      font-size: 1rem;
+    }
+    &-image {
+      height: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .news__container {
+    height: 100%;
+
+    &-daily-date {
+      font-size: 1.2rem;
+    }
+
+    &-daily-title {
+      font-size: 1.5rem;
+    }
+
+    &-daily-story {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .news__container {
+    height: 100%;
+
+    &-daily-title {
+      font-size: 1.2rem;
+    }
+
+    &-daily-story {
+      font-size: 0.7rem;
+    }
+  }
+  .paper {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .news__container {
+    height: 100%;
+
+    &-title {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .news__container {
+    height: 100%;
+
+    &-title {
+      font-size: 0.8rem;
+    }
   }
 }

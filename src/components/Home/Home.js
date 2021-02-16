@@ -10,6 +10,7 @@ function Home() {
   return (
     <div>
       <Header />
+
       <About />
       <Planets />
       <News />

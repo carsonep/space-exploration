@@ -7,6 +7,7 @@ function MainNav() {
       <nav className="top__nav">
         <ul className="top__nav-list">
           <li className="top__nav-list-item">Home</li>
+
           <li className="top__nav-list-item">About</li>
           <li className="top__nav-list-item">Explore</li>
           <li className="top__nav-list-item">News</li>
