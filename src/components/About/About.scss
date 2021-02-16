@@ -77,6 +77,7 @@ p {
 .footer-button {
   position: absolute;
   border-radius: 4px;
+  border: none;
   width: 100%;
   height: 2rem;
   color: #ffffff;
@@ -94,6 +95,7 @@ p {
 
 .footer-button:hover {
   background-color: #5643fd;
+  cursor: pointer;
 }
 
 .media {
@@ -249,4 +251,8 @@ p {
       font-size: 0.8rem;
     }
   }
+}
+
+.wow {
+  visibility: hidden;
 }

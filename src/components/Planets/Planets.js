@@ -1,11 +1,17 @@
-import React from "react";
-// import "../About/About.scss";
+import React, { useEffect } from "react";
+import "../About/About.scss";
 import SpaceBackground from "../../img/1253115.jpg";
 import Mars from "../../img/mars_planet_PNG23.png";
 import Moon from "../../img/moon_PNG52.png";
-import Vesta from "../../img/vesta.png";
+import Mercury from "../../img/mercury.png";
+import { NavLink } from "react-router-dom";
+import WOW from "wowjs";
 
 function Planets() {
+  useEffect(() => {
+    new WOW.WOW({ live: false }).init();
+  });
+
   return (
     <div className="about__container">
       <img
@@ -13,10 +19,12 @@ function Planets() {
         src={SpaceBackground}
         alt="star background"
       />
-      <h1 className="about__container-title">Start Exploring</h1>
+      <h1 className="about__container-title animate__animated wow animate__zoomIn animated">
+        Start Exploring
+      </h1>
 
       <div className="about__container-description">
-        <div className="media">
+        <div className="media animate__animated wow animate__fadeInLeft animated">
           <div className="img">
             <img src={Moon} alt="Placeholder" />
           </div>
@@ -31,18 +39,13 @@ function Planets() {
             </p>
           </div>
           <div className="footer">
-            <a
-              className="footer-button"
-              href="https://api.nasa.gov/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Explore Moon
-            </a>
+            <NavLink to="/explore/moon">
+              <button className="footer-button">Explore Moon</button>
+            </NavLink>
           </div>
         </div>
 
-        <div className="media media-flip">
+        <div className="media media-flip animate__animated wow animate__fadeInRight animated">
           <div className="img">
             <img src={Mars} alt="Placeholder" />
           </div>
@@ -57,40 +60,44 @@ function Planets() {
             </p>
           </div>
           <div className="footer">
-            <a
-              className="footer-button"
-              href="https://api.nasa.gov/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Explore Mars
-            </a>
+            <NavLink to="/explore/mars">
+              <button
+                className="footer-button"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Explore Mars
+              </button>
+            </NavLink>
           </div>
         </div>
 
-        <div className="media">
+        <div className="media animate__animated wow animate__fadeInLeft animated">
           <div className="img">
-            <img src={Vesta} alt="Placeholder" />
+            <img src={Mercury} alt="Placeholder" />
           </div>
-          <h2 className="title">Vesta</h2>
+          <h2 className="title">Mercury</h2>
           <div className="content">
             <p>
-              Vesta is the second most massive body in the asteroid belt,
-              surpassed only by Ceres, which is classified as a dwarf planet.
-              The brightest asteroid in the sky, Vesta is occasionally visible
-              from Earth with the naked eye. ... The Dawn mission orbited Vesta
-              in 2011, providing new insights into this rocky world.
+              The smallest planet in our solar system and nearest to the Sun,
+              Mercury is only slightly larger than Earth's Moon. From the
+              surface of Mercury, the Sun would appear more than three times as
+              large as it does when viewed from Earth, and the sunlight would be
+              as much as seven times brighter. Despite its proximity to the Sun,
+              Mercury is not the hottest planet in our solar system – that title
+              belongs to nearby Venus, thanks to its dense atmosphere.
             </p>
           </div>
           <div className="footer">
-            <a
-              className="footer-button"
-              href="https://api.nasa.gov/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Explore Vesta
-            </a>
+            <NavLink to="/explore/mercury">
+              <button
+                className="footer-button"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Explore Mercury
+              </button>
+            </NavLink>
           </div>
         </div>
       </div>

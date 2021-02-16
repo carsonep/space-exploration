@@ -5,9 +5,14 @@ import NasaPic from "../../img/nasa.jpg";
 import SpaceX from "../../img/spacex-693229_640.jpg";
 import NasaLogo from "../../img/nasalogo.png";
 
-import React from "react";
+import React, { useEffect } from "react";
+import WOW from "wowjs";
 
 function About() {
+  useEffect(() => {
+    new WOW.WOW({ live: false }).init();
+  }, []);
+
   return (
     <div className="about__container">
       <img
@@ -15,10 +20,12 @@ function About() {
         src={SpaceBackground}
         alt="star background"
       />
-      <h1 className="about__container-title">About Space Exploration</h1>
+      <h1 className="about__container-title animate__animated wow animate__zoomIn animated">
+        About Space Exploration
+      </h1>
 
       <div className="about__container-description">
-        <div className="media">
+        <div className="media animate__animated wow animate__fadeInLeft animated">
           <div className="img">
             <img src={NasaPic} alt="Placeholder" />
           </div>
@@ -33,7 +40,7 @@ function About() {
           </div>
         </div>
 
-        <div className="media media-flip">
+        <div className="media media-flip animate__animated wow animate__fadeInRight animated">
           <div className="img">
             <img src={SpaceX} alt="Placeholder" />
           </div>
@@ -52,7 +59,7 @@ function About() {
           </div>
         </div>
 
-        <div className="media">
+        <div className="media animate__animated wow animate__fadeInLeft animated">
           <div className="img">
             <img src={MarsRover} alt="Placeholder" />
           </div>
@@ -68,7 +75,7 @@ function About() {
           </div>
         </div>
 
-        <div className="media media-flip">
+        <div className="media media-flip animate__animated wow animate__fadeInRight animated">
           <div className="img">
             <img src={NasaLogo} alt="Placeholder" />
           </div>

@@ -14,7 +14,7 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/explore/mars" exact component={MarsView} />
           <Route path="/explore/moon" exact component={MoonView} />
-          <Route path="/explore/vesta" exact component={MercuryView} />
+          <Route path="/explore/mercury" exact component={MercuryView} />
         </Switch>
       </div>
     </Router>

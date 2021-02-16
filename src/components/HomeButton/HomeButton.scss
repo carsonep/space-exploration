@@ -1,0 +1,23 @@
+@import "../../styles/variables";
+
+.home__btn {
+  position: relative;
+  display: flex;
+}
+
+.home__btn-home {
+  display: flex;
+
+  flex: 1;
+  position: absolute;
+  z-index: 1000;
+  font-size: 2.5rem;
+  left: 95%;
+  margin-top: 1rem;
+  color: $secondary-font-color;
+  transition: all 0.2s;
+
+  &:hover {
+    color: #fff;
+  }
+}

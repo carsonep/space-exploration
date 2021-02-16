@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import "../SpaceView/SpaceView.scss";
-
+import { NavLink } from "react-router-dom";
 import Config from "@arcgis/core/config";
 import Map from "@arcgis/core/Map";
 import SceneView from "@arcgis/core/views/SceneView";
 import TileLayer from "@arcgis/core/layers/TileLayer";
 import FeatureLayer from "@arcgis/core/layers/FeatureLayer";
 import LayerList from "@arcgis/core/widgets/LayerList";
-
+import HomeButton from "../HomeButton/HomeButton";
 Config.apiKey =
   "AAPKd531b53f980f4a87880dc870c8c1c7d3aLPvIb210--jpJYpsM1SrSSRUEbo-XNGtLQXMaRO_IPPMyZAQt0UMBk8SvvY94QI";
 
@@ -30,7 +30,6 @@ function MercuryView() {
       map: map,
       container: "viewDiv",
       qualityProfile: "high",
-      // setting the spatial reference for mercury_2000 coordinate system
       spatialReference: {
         wkid: 102100,
       },
@@ -181,6 +180,9 @@ function MercuryView() {
 
   return (
     <div className="body__div">
+      <NavLink to="/">
+        <HomeButton />
+      </NavLink>
       <div id="viewDiv"></div>
     </div>
   );

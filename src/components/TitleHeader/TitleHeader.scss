@@ -51,6 +51,8 @@
   font-weight: 700;
   padding: 0 3rem;
   letter-spacing: 0.1rem;
+  color: $secondary-font-color;
+  transition: all 0.2s;
 
   &:hover {
     cursor: pointer;
