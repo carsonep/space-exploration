@@ -44,7 +44,7 @@
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
-![Alt text](https://sample/url/name-of-gif-file.gif)
+![](http://i.imgur.com/OUkLi.gif)
 
 Space Exploration themed website with awesome 3d views of the moon mars and mercury
 
