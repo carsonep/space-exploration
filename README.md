@@ -16,6 +16,7 @@
 
 <!-- PROJECT LOGO -->
 <br />
+![space-exploration-demo](https://user-images.githubusercontent.com/67990217/108283484-f102ab00-7148-11eb-94c9-0fb1faa79a36.gif)
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -44,7 +45,6 @@
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
-![](https://i.imgur.com/9WT0KoB.gif)
 
 Space Exploration themed website with awesome 3d views of the moon mars and mercury
 
