@@ -22,7 +22,7 @@
   "scripts": {
     "copy": "ncp ./node_modules/@arcgis/core/assets ./public/assets",
     "start": "npm run copy && react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run copy && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
