@@ -45,7 +45,7 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]]()
+[![Product Name Screen Shot][product-screenshot]](https://media.giphy.com/media/nNQLJWT7iboF7wl7Vb/giphy.gif)
 
 Space Exploration themed website with awesome 3d views of the moon mars and mercury
 
