@@ -168,6 +168,7 @@ function MercuryView() {
           },
         },
       ],
+      visible: false,
     });
     map.add(humanImprint);
 
