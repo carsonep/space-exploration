@@ -44,7 +44,7 @@
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
-![](https://i.imgur.com/Nua22NF.gif)
+[Imgur](https://i.imgur.com/Nua22NF.gifv)
 
 Space Exploration themed website with awesome 3d views of the moon mars and mercury
 
