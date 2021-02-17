@@ -63,7 +63,7 @@ function MoonView() {
 
     const cratersLayer = new FeatureLayer({
       url:
-        "https://services.arcgis.com/VXxCfMpXUKuFKFvE/arcgis/rest/services/LunarCraters/FeatureServer?f=pjson",
+        "https://services.arcgis.com/VXxCfMpXUKuFKFvE/arcgis/rest/services/LunarCraters/FeatureServer",
       title: "Craters",
       renderer: {
         type: "simple",

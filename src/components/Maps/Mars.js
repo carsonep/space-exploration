@@ -9,16 +9,17 @@ import TileLayer from "@arcgis/core/layers/TileLayer";
 import FeatureLayer from "@arcgis/core/layers/FeatureLayer";
 import LayerList from "@arcgis/core/widgets/LayerList";
 import HomeButton from "../HomeButton/HomeButton";
-Config.apiKey =
-  "AAPKd531b53f980f4a87880dc870c8c1c7d3aLPvIb210--jpJYpsM1SrSSRUEbo-XNGtLQXMaRO_IPPMyZAQt0UMBk8SvvY94QI";
 
 Config.assetsPath = "assets/";
+Config.portalUrl = "http://localhost:3000/explore/mars";
 
 function MarsView() {
   useEffect(() => {
+    Config.apiKey =
+      "AAPKd531b53f980f4a87880dc870c8c1c7d3aLPvIb210--jpJYpsM1SrSSRUEbo-XNGtLQXMaRO_IPPMyZAQt0UMBk8SvvY94QI";
     const marsElevation = new ElevationLayer({
       url:
-        "https://astro.arcgis.com/arcgis/rest/services/OnMars/MDEM200M/ImageServer?f=json",
+        "https://astro.arcgis.com/arcgis/rest/services/OnMars/MDEM200M/ImageServer",
       copyright:
         "NASA, ESA, HRSC, Goddard Space Flight Center, USGS Astrogeology Science Center, Esri",
     });
@@ -127,7 +128,7 @@ function MarsView() {
 
     const shadedRelief = new TileLayer({
       url:
-        "https://astro.arcgis.com/arcgis/rest/services/OnMars/MColorDEM/MapServer?f=json",
+        "https://astro.arcgis.com/arcgis/rest/services/OnMars/MColorDEM/MapServer",
       title: "Shaded Relief",
       visible: false,
     });
