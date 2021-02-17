@@ -9,7 +9,10 @@ import Footer from "../Footer/Footer";
 function Home() {
   return (
     <div>
-      <Header />
+      <section id="section1">
+        <Header />
+      </section>
+
       <section id="section2">
         <About />
       </section>

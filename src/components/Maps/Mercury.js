@@ -29,7 +29,7 @@ function MercuryView() {
     const view = new SceneView({
       map: map,
       container: "viewDiv",
-      qualityProfile: "high",
+      qualityProfile: "medium",
       spatialReference: {
         wkid: 102100,
       },
