@@ -34,8 +34,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    
-    
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -59,10 +57,9 @@ Features
 
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
 - [React](https://reactjs.org/)
 - [SCSS](https://sass-lang.com/)
+- [Arcgis 4.18 API](https://developers.arcgis.com/javascript/latest/)
 
 ### Prerequisites
 
@@ -123,7 +120,6 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 - [WOW.js](https://wowjs.uk/)
 - [Animate.css](https://daneden.github.io/animate.css)
 - [react-scroll](https://www.npmjs.com/package/react-scroll)
--
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
