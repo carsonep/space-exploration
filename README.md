@@ -17,7 +17,7 @@
 <!-- PROJECT LOGO -->
 <br />
 
-![space-exploration-demo](https://user-images.githubusercontent.com/67990217/108283484-f102ab00-7148-11eb-94c9-0fb1faa79a36.gif)
+![space-exploration-demo]<img src="https://user-images.githubusercontent.com/67990217/108283484-f102ab00-7148-11eb-94c9-0fb1faa79a36.gif" width="400" height="790">
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
