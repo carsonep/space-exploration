@@ -15,6 +15,10 @@ function Footer() {
           <ul className="footer__section-social-list">
             <li className="footer__section-social-item">
               <a
+                style={{
+                  textDecoration: "none",
+                  color: "rgba(255, 255, 255, 0.7)",
+                }}
                 href="https://github.com/carsonep"
                 target="_blank"
                 rel="noreferrer"

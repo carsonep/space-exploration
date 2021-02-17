@@ -89,6 +89,20 @@
     }
   }
   .title__list-component {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .title__header {
+    &-start {
+      font-size: 0.8rem;
+    }
+    &-primary {
+      font-size: 1.7rem;
+    }
+  }
+  .title__list-component {
+    padding: 0 2rem;
   }
 }

@@ -10,10 +10,16 @@ function Home() {
   return (
     <div>
       <Header />
+      <section id="section2">
+        <About />
+      </section>
+      <section id="section3">
+        <Planets />
+      </section>
+      <section id="section4">
+        <News />
+      </section>
 
-      <About />
-      <Planets />
-      <News />
       <Footer />
     </div>
   );

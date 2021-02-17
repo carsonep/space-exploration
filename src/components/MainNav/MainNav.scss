@@ -7,29 +7,35 @@
   width: 100%;
 
   &-list {
-    padding: 0 3rem;
     display: flex;
 
     list-style: none;
 
     &-item {
-      padding: 0 2rem;
+      padding: 0 1rem;
       font-size: 1.4rem;
       color: $secondary-font-color;
+      transition: all 0.2s;
+
+      &:hover {
+        cursor: pointer;
+        color: $primary-font-color;
+      }
     }
   }
 }
 
-// .hamburger {
-//   display: none;
-// }
+@media only screen and (max-width: 480px) {
+  .top__nav {
+    &-list {
+      display: flex;
 
-// @media only screen and (max-width: 768px) {
-//   .hamburger {
-//     display: block;
-//   }
+      list-style: none;
 
-//   .top__nav-list {
-//     display: none;
-//   }
-// }
+      &-item {
+        padding: 0 0.5rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
