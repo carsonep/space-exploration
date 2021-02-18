@@ -17,7 +17,7 @@
 <!-- PROJECT LOGO -->
 <br />
 
-<img src="https://user-images.githubusercontent.com/67990217/108283484-f102ab00-7148-11eb-94c9-0fb1faa79a36.gif" width="100%" height="600">
+<img src="https://user-images.githubusercontent.com/67990217/108283484-f102ab00-7148-11eb-94c9-0fb1faa79a36.gif" width="100%" height="80%">
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
