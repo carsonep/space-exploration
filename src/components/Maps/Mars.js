@@ -11,7 +11,7 @@ import LayerList from "@arcgis/core/widgets/LayerList";
 import HomeButton from "../HomeButton/HomeButton";
 
 Config.assetsPath = "assets/";
-Config.portalUrl = "http://localhost:3000/explore/mars";
+
 
 function MarsView() {
   useEffect(() => {
@@ -19,14 +19,14 @@ function MarsView() {
       "AAPKd531b53f980f4a87880dc870c8c1c7d3aLPvIb210--jpJYpsM1SrSSRUEbo-XNGtLQXMaRO_IPPMyZAQt0UMBk8SvvY94QI";
     const marsElevation = new ElevationLayer({
       url:
-        "https://astro.arcgis.com/arcgis/rest/services/OnMars/MDEM200M/ImageServer",
+        "https://cors-anywhere.herokuapp.com/https://astro.arcgis.com/arcgis/rest/services/OnMars/MDEM200M/ImageServer",
       copyright:
         "NASA, ESA, HRSC, Goddard Space Flight Center, USGS Astrogeology Science Center, Esri",
     });
 
     const marsImagery = new TileLayer({
       url:
-        "https://astro.arcgis.com/arcgis/rest/services/OnMars/MDIM/MapServer",
+        "https://cors-anywhere.herokuapp.com/https://astro.arcgis.com/arcgis/rest/services/OnMars/MDIM/MapServer",
       title: "Imagery",
       copyright: "USGS Astrogeology Science Center, NASA, JPL, Esri",
     });
@@ -66,7 +66,7 @@ function MarsView() {
 
     const cratersLayer = new FeatureLayer({
       url:
-        "https://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/Mars_Nomenclature_Mountains/FeatureServer/layers",
+        "https://cors-anywhere.herokuapp.com/https://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/Mars_Nomenclature_Mountains/FeatureServer/layers",
       definitionExpression: "type = 'Crater, craters'",
       title: "Mars Craters",
       renderer: {
@@ -128,7 +128,7 @@ function MarsView() {
 
     const shadedRelief = new TileLayer({
       url:
-        "https://astro.arcgis.com/arcgis/rest/services/OnMars/MColorDEM/MapServer",
+        "https://cors-anywhere.herokuapp.com/https://astro.arcgis.com/arcgis/rest/services/OnMars/MColorDEM/MapServer",
       title: "Shaded Relief",
       visible: false,
     });
