@@ -11,22 +11,23 @@ import LayerList from "@arcgis/core/widgets/LayerList";
 import HomeButton from "../HomeButton/HomeButton";
 
 Config.assetsPath = "assets/";
-Config.portalUrl = "http://localhost:3000/explore/mars";
 
 function MarsView() {
   useEffect(() => {
+    // Config.defaults.io.corsEnabledServers;
+
     Config.apiKey =
       "AAPKd531b53f980f4a87880dc870c8c1c7d3aLPvIb210--jpJYpsM1SrSSRUEbo-XNGtLQXMaRO_IPPMyZAQt0UMBk8SvvY94QI";
     const marsElevation = new ElevationLayer({
       url:
-        "https://astro.arcgis.com/arcgis/rest/services/OnMars/MDEM200M/ImageServer",
+        "https://tiles.arcgis.com/tiles/qyI00Ol6Z064DQ0K/arcgis/rest/services/MARS_Elevation_Layer/ImageServer",
       copyright:
         "NASA, ESA, HRSC, Goddard Space Flight Center, USGS Astrogeology Science Center, Esri",
     });
 
     const marsImagery = new TileLayer({
       url:
-        "https://astro.arcgis.com/arcgis/rest/services/OnMars/MDIM/MapServer",
+        "https://tiles.arcgis.com/tiles/qyI00Ol6Z064DQ0K/arcgis/rest/services/Mars_Basemap3/MapServer",
       title: "Imagery",
       copyright: "USGS Astrogeology Science Center, NASA, JPL, Esri",
     });
@@ -44,7 +45,7 @@ function MarsView() {
       qualityProfile: "medium",
       // setting the spatial reference for Mars_2000 coordinate system
       spatialReference: {
-        wkid: 104971,
+        wkid: 102100,
       },
       environment: {
         background: {
@@ -57,7 +58,7 @@ function MarsView() {
           x: 27.63423,
           y: -6.34466,
           z: 1281525.766,
-          spatialReference: 104971,
+          spatialReference: 102100,
         },
         heading: 332.28,
         tilt: 37.12,
@@ -126,9 +127,72 @@ function MarsView() {
 
     map.add(cratersLayer);
 
+    const landingLayer = new FeatureLayer({
+      url:
+        "https://services9.arcgis.com/qyI00Ol6Z064DQ0K/ArcGIS/rest/services/SpaceX_Potential_Landing_Sites/FeatureServer/0",
+
+      title: "SpaceX Landing Sites",
+      renderer: {
+        type: "simple",
+        symbol: {
+          type: "simple-marker",
+          symbolLayers: [
+            {
+              type: "fill",
+              material: { color: [255, 255, 255, 0.1] },
+              outline: {
+                color: [0, 0, 0, 0.4],
+                size: 2,
+              },
+            },
+          ],
+        },
+      },
+      labelingInfo: [
+        {
+          labelPlacement: "above-center",
+          labelExpressionInfo: { expression: "$feature.FeatName" },
+          symbol: {
+            type: "label-3d",
+            symbolLayers: [
+              {
+                type: "text",
+                material: {
+                  color: [0, 0, 0, 0.9],
+                },
+                halo: {
+                  size: 1,
+                  color: [255, 255, 255, 0.7],
+                },
+                font: {
+                  size: 11,
+                },
+              },
+            ],
+            verticalOffset: {
+              screenLength: 40,
+              maxWorldLength: 500000,
+              minWorldLength: 0,
+            },
+            callout: {
+              type: "line",
+              size: 0.5,
+              color: [255, 255, 255, 0.9],
+              border: {
+                color: [0, 0, 0, 0.3],
+              },
+            },
+          },
+        },
+      ],
+      visible: false,
+    });
+
+    map.add(landingLayer);
+
     const shadedRelief = new TileLayer({
       url:
-        "https://astro.arcgis.com/arcgis/rest/services/OnMars/MColorDEM/MapServer",
+        "https://tiles.arcgis.com/tiles/nzS0F0zdNLvs7nc8/arcgis/rest/services/MOLA_elevation_wm/MapServer",
       title: "Shaded Relief",
       visible: false,
     });
