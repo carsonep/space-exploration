@@ -11,6 +11,8 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 config.assetsPath = "/assets";
+config.apiKey =
+  "AAPKd531b53f980f4a87880dc870c8c1c7d3aLPvIb210--jpJYpsM1SrSSRUEbo-XNGtLQXMaRO_IPPMyZAQt0UMBk8SvvY94QI";
 
 ReactDOM.render(
   <React.StrictMode>

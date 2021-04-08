@@ -16,8 +16,6 @@ function MarsView() {
   useEffect(() => {
     // Config.defaults.io.corsEnabledServers;
 
-    Config.apiKey =
-      "AAPKd531b53f980f4a87880dc870c8c1c7d3aLPvIb210--jpJYpsM1SrSSRUEbo-XNGtLQXMaRO_IPPMyZAQt0UMBk8SvvY94QI";
     const marsElevation = new ElevationLayer({
       url:
         "https://tiles.arcgis.com/tiles/qyI00Ol6Z064DQ0K/arcgis/rest/services/MARS_Elevation_Layer/ImageServer",
