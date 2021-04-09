@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "../SpaceView/SpaceView.scss";
 import { NavLink } from "react-router-dom";
-import Config from "@arcgis/core/config";
+import config from "@arcgis/core/config";
 import Map from "@arcgis/core/Map";
 import SceneView from "@arcgis/core/views/SceneView";
 import ElevationLayer from "@arcgis/core/layers/ElevationLayer";
@@ -10,7 +10,7 @@ import FeatureLayer from "@arcgis/core/layers/FeatureLayer";
 import LayerList from "@arcgis/core/widgets/LayerList";
 import HomeButton from "../HomeButton/HomeButton";
 
-Config.assetsPath = "assets/";
+config.assetsPath = "assets/";
 
 function MarsView() {
   useEffect(() => {

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "../SpaceView/SpaceView.scss";
-import Config from "@arcgis/core/config";
+import config from "@arcgis/core/config";
 import Map from "@arcgis/core/Map";
 import SceneView from "@arcgis/core/views/SceneView";
 import ElevationLayer from "@arcgis/core/layers/ElevationLayer";
@@ -10,7 +10,7 @@ import FeatureLayer from "@arcgis/core/layers/FeatureLayer";
 import LayerList from "@arcgis/core/widgets/LayerList";
 import HomeButton from "../HomeButton/HomeButton";
 
-Config.apiKey =
+config.apiKey =
   "AAPKd531b53f980f4a87880dc870c8c1c7d3aLPvIb210--jpJYpsM1SrSSRUEbo-XNGtLQXMaRO_IPPMyZAQt0UMBk8SvvY94QI";
 
 function MoonView() {
